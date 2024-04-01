@@ -1,0 +1,113 @@
+
+body {
+    font-family: 'Georgia', serif;
+    color: #000;
+    background-image: url('../images/picture1.jpg');
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+line-height: 1.6;  }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #55acef;
+    padding: 10px 20px;
+    border-radius: 10px
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.links {
+margin: 10px 2% 1em 0;
+padding: 5px;
+display: flex;
+}
+
+.links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#uniqueElement {
+  color: #0000ff;
+  border: 1px solid #000;
+}
+
+
+
+.float-layout {
+  float: left;
+  width: 50%;
+}
+.form {
+  animation: fadeIn 1s ease-in-out;
+}
+.flex-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+
+a:hover {
+  color: #0000ff;
+}
+
+a:focus {
+  outline: none;
+  border-bottom: 2px solid #0000ff;
+}
+
+a::before {
+  content: "|";
+}
+
+a::after {
+  content: "|";
+}
+
+article {
+margin-bottom: 30px;
+}
+h2 {
+margin-top: 0;
+}
+img {
+max-width: 100%;
+height: auto;
+}
+input[type="text"]:focus + label,
+input[type="email"]:focus + label,
+input[type="password"]:focus + label {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #0000ff;
+}
+label {
+  display: block;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
