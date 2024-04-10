@@ -1,0 +1,238 @@
+body {
+    font-family: 'Georgia', serif;
+    color: #000;
+    background-size: cover;
+    text-align: center;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(39, 247, 230) 3%, rgb(35, 122, 228) 38%, rgb(15, 47, 251) 68%, rgb(104, 17, 255) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 0%;
+        }
+        50% {
+            background-position: 100% 100%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+@keyframes fadeIn {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    
+    .main-title {
+        animation: fadeIn 2s;
+    }
+    .menu {
+        transition: all 0.5s ease;
+    }
+    
+    .menu:hover {
+        background-color: #f2f2f2;
+    }
+    .post {
+        transition: all 0.5s ease;
+    }
+    
+    .post:hover {
+        transform: scale(1.05);
+    }
+.post {
+    margin-bottom: 50px;
+    margin: 30px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-text, .post-image-container {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.post h2, .post p {
+    color: #000000;
+    font-size: 18px; 
+    margin-left: 1px; 
+    line-height: 2;
+}
+
+img.post-image {
+    height: 480px;
+    width: auto;
+    border: 5px solid #3333330e;
+    margin: 10px; 
+}
+.chenar  
+{
+    width: 100%;
+    height: 100%;
+    background-color: #fcffffcf;
+    transform: scale(0.980);
+    transition: transform 0.3s ease; 
+    border-radius: 10px;
+    padding: 5px;
+}
+header {
+    background-color: #3d7ddc;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); 
+}
+.resized-image {
+    width: 1080px;
+    height: auto;
+}
+.box {
+    width: auto;
+    height: auto;
+    background-color: #f5f9fbb1;
+    transform: scale(0.980);
+    transition: transform 0.3s ease; 
+    border-radius: 10px;
+    padding: 15px;
+}
+.box-text {
+    
+    color: #fcffffcf;
+    font-size: 18px;
+    margin: 10px 10px;
+    background-color: #1580b6;
+    text-align: center
+    
+}
+
+.box:hover {
+    transform: scale(1);
+}
+
+.box2 {
+    width: auto;
+    height: auto;
+    background-color: #1580b6;
+    transform: scale(0.980);
+    transition: transform 0.3s ease; 
+    border-radius: 20px;
+    padding: 20px;    
+}
+
+.box2:hover {
+    transform: scale(1); 
+}
+
+@keyframes box-animation {
+    0% { transform: scale(0.980); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.980); }
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+h1 {
+    animation: juggle 5s infinite;
+}
+
+@keyframes juggle {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0px); }
+    75% { transform: translateY(-5px); }
+}
+
+nav {
+    display: flex;
+}
+a::before {
+    content: "|";
+  }
+  
+  a::after {
+    content: "|";
+  }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px; 
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #3d7ddc 50%, #329bf1 50%);
+    transition: all 0.5s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    background-position: right center;
+}
+
+@media (max-width: 1200px) {
+
+    .post {
+        margin: 20px 100px;
+    }
+
+    .post h2, .post p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .post {
+        margin: 20px 50px;
+    }
+
+    .post h2, .post p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .post {
+        margin: 20px 10px;
+    }
+
+    .post h2, .post p {
+        font-size: 12px;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+   
+}
+
+
+body.user-is-scrolled .back-to-top {
+    display: inline;
+}
