@@ -161,11 +161,11 @@ h1 {
 nav {
     display: flex;
 }
-a::before {
+nav a::before {
     content: "|";
   }
   
-  a::after {
+ nav a::after {
     content: "|";
   }
 
@@ -238,20 +238,3 @@ nav a:hover {
     }
 }
 
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-   
-}
-
-
-body.user-is-scrolled .back-to-top {
-    display: inline;
-}

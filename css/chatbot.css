@@ -118,11 +118,11 @@ h1 {
 nav {
     display: flex;
 }
-a::before {
+nav a::before {
     content: "|";
   }
   
-  a::after {
+ nav a::after {
     content: "|";
   }
   @keyframes slideInFromRight {
@@ -194,23 +194,7 @@ nav a:hover {
     }
 }
 
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-   
-}
 
-
-body.user-is-scrolled .back-to-top {
-    display: inline;
-}
 section {
     display: flex;
     justify-content: center;
@@ -228,7 +212,7 @@ section {
     background-color: #f5f9fbb1;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin: 20px;
     overflow-y: auto;
     transform: scale(0.980);
     transition: transform 0.3s ease; 

@@ -20,4 +20,3 @@ function validateForm() {
     alert("Form submitted successfully!");
     return true;
 }
-const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'});
