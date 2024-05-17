@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="{% static 'myapp/css/about.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/menu.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/BackToTheTop.css' %}">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baboș Cătălin-Daniel - About</title>
+  
+</head>
+<script src="{% static 'myapp/about.js' %}"></script>
+<script src="{% static 'myapp/menu.js' %}"></script>
+<script src="{% static 'myapp/BackToTheTop.js' %}"></script>  
+<body>
+  {% block content %}
+  <header>
+    <h1>Welcome to About Me!</h1>
+    <nav>
+      <a href="{% url 'home' %}">HOME</a>
+      <a href="{% url 'about' %}">ABOUT</a>
+      <a href="{% url 'gallery' %}">GALLERY</a>
+      <a href="{% url 'form' %}">FORM</a>
+      <a href="{% url 'chatbot' %}">CHATBOT</a>
+      <div class="MenuButton" onclick="Menu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+  </nav>
+  </header>
+  
+  <p></p> 
+
+  
+    <section>
+      <article>
+        <post>
+          <div class="poza">
+            <img src="{% static 'myapp/images/about.jpg' %}" alt="Profile picture" class="profile-picture">
+           </div>
+            <div class="text-box">
+            <h2>Welcome to About Me!</h2>
+            <p>
+              •I'm Baboș Cătălin-Daniel, a computer science student at the Western University of Timisoara. I'm passionate about artificial intelligence and web development.
+            </p>
+              <p>•As an AI enthusiast, I constantly immerse myself in the latest breakthroughs, seeking to understand the vast potential of this transformative technology. </p>
+                <p>•Simultaneously, I find joy in web development, meticulously crafting digital experiences that blend aesthetics with functionality.</p>
+             <p> •Here, I'll share my thoughts, experiences, and knowledge about various topics.</p>
+          </div>
+        </post>
+        <main>
+          <table class="styledTable">
+              <tr>
+                <th>Education</th>
+                <th>
+                  <strong>High School William Shakespeare 2019-2023</strong>
+                  <br>
+                  <strong>West University of Timișoara 2023-2026</strong>
+                </th>
+              </tr>
+              <tr>
+                <td><strong>Skills</strong></td>
+                <td><strong>Microsoft Office</strong>
+                  <br>
+                  <strong>Cambridge C1 level</strong>
+                  <br>
+                  <strong>Python</strong>
+                  <br>
+                  <strong>C/C++</strong>
+                  <br>
+                  <strong>HTML</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Projects</strong></td>
+                <td><strong>My Blog(HTML)</strong>
+                <br><strong>Arcade(C)</strong></td>
+          </table>
+          {% endblock %} 
+  </main>
+
+  <footer>
+    <a href="#" onclick="toTop(); return false;" class="back-to-top">⇑</a>
+    <p>&copy; 2024 Baboș Cătălin-Daniel - Blog</p>
+  </footer>
+</body>
+</html>

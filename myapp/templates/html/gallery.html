@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/gallery.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/BackToTheTop.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script src="{% static 'myapp/menu.js' %}"></script>  
+<script src="{% static 'myapp/BackToTheTop.js' %}"></script>
+<body>
+  {% block content %}
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+          <a href="{% url 'home' %}">HOME</a>
+          <a href="{% url 'about' %}">ABOUT</a>
+          <a href="{% url 'gallery' %}">GALLERY</a>
+          <a href="{% url 'form' %}">FORM</a>
+          <a href="{% url 'chatbot' %}">CHATBOT</a>
+            <div class="MenuButton" onclick="Menu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <div class="gallery__item">
+          <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+          <img class="gallery__img" src="https://picsum.photos/id/1015/600/400.jpg" alt=""/>
+          <label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt=""/></label>
+        </div>
+        <div class="gallery__item">
+          <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+          <img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt=""/>
+          <label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt=""/></label>
+        </div>
+        <div class="gallery__item">
+          <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+          <img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt=""/>
+          <label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt=""/></label>
+        </div>
+        <div class="gallery__item">
+          <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+          <img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt=""/>
+          <label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt=""/></label>
+        </div>
+      </section>
+      {% endblock %} 
+    <footer>
+        <a href="#" onclick="toTop(); return false;" class="back-to-top">⇑</a>
+        <p>© 2024 Baboș Cătălin-Daniel Blog</p>
+    </footer>
+    
+</body>
+</html>

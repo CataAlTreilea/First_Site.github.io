@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'myapp/css/chatbot.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/memu.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/BackToTheTop.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {% block content %}
+    <header>
+        <h1>Welcome to The Chatbot !</h1>
+        <nav>
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'about' %}">ABOUT</a>
+            <a href="{% url 'gallery' %}">GALLERY</a>
+            <a href="{% url 'form' %}">FORM</a>
+            <a href="{% url 'chatbot' %}">CHATBOT</a>
+            <div class="MenuButton" onclick="Menu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+          
+            <div class="chat-container" id="chat-container">
+            </div>
+
+        </section>
+        <div class="chat_formr" id="chat_formr">
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Answer Here...">
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            
+            </form>
+      </div>
+<script src="{% static 'myapp/menu.js' %}"></script>
+<script src="{% static 'myapp/chatbot.js' %}"></script>
+<script src="{% static 'myapp/BackToTheTop.js' %}"></script>
+    </body>
+    </main>
+    {% endblock %} 
+    <footer>
+        <a href="#" onclick="toTop(); return false;" class="back-to-top">⇑</a>
+        <p>© 2024 Baboș Cătălin-Daniel Blog</p>
+    </footer>
+
+
+</html>
