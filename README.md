@@ -22,4 +22,14 @@ Back-end: Django (Python web framework)
 
 Database: SQLite (default Django database)
 
-Deployment: Github
+## Getting Started
+
+To run the project locally, follow these steps:
+
+Clone the repository: git clone [https://github.com/your-username/blog-project.git](https://github.com/CataAlTreilea/Test_Site.github.io)
+Open PowerShell 
+Navigate to the project directory: cd blog
+Apply database migrations: python manage.py migrate
+Start the development server: python manage.py runserver
+Open your web browser and visit: [http://localhost:8000](http://127.0.0.1:8000/)
+
