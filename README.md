@@ -1,6 +1,6 @@
 # Blog Project
 
-This is a website project developed as part of the web development curriculum at West University of Timisoara. The project aims to create an informative and user-friendly website for my blog.
+This is a website project developed as part of the web development curriculum at West University of Timişoara. The project aims to create an informative and user-friendly website for my blog.
 
 ## Features
 
