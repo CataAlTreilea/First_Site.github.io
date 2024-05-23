@@ -7,4 +7,5 @@ path('about', views.about, name='about'),
 path('form', views.form, name='form'),
 path('chatbot', views.chatbot, name='chatbot'),
 path('gallery', views.gallery, name='gallery'),
+path('post/<int:post_id>/', views.post_detail, name='post_detail'),
 ]

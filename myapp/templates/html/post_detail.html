@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/BackToTheTop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/searchPosts.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog!</h1>
+        <nav>
+            <a href="{% url 'home' %}">HOME</a>
+            <a href="{% url 'about' %}">ABOUT</a>
+            <a href="{% url 'gallery' %}">GALLERY</a>
+            <a href="{% url 'form' %}">FORM</a>
+            <a href="{% url 'chatbot' %}">CHATBOT</a>
+        
+            <div class="MenuButton" onclick="Menu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="post">
+                <div class="post-image-container">
+                    <div class="box2">
+                        <img src="{{ post.image.url }}" class="post-image" alt="{{ post.title }}">
+                        <p style="color: rgba(251, 251, 251, 0.995);"> Posted on {{ post.post_date }}</p>
+                    </div>
+                </div>
+                <div class="post-text">
+                    <div class="box">
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.paragraph }}</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="{% static 'js/searchPosts.js' %}"></script>
+    <script src="{% static 'js/menu.js'%}"></script>
+    <script src="{% static 'js/BackToTheTop.js'%}"></script>   
+    <footer>
+        <a href="#" onclick="toTop(); return false;" class="back-to-top">⇑</a>
+        <p>© 2024 Baboș Cătălin-Daniel Blog</p>
+    </footer>
+</body>
+</html>

@@ -2,13 +2,11 @@
 <html>
 <head>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'myapp/css/menu.css' %}">
-    <link rel="stylesheet" href="{% static 'myapp/css/BackToTheTop.css' %}">
-    <link rel="stylesheet" href="{% static 'myapp/css/searchPosts.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/BackToTheTop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/searchPosts.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -35,99 +33,34 @@
 
     <main>
         {% block content %}
+        {% for post in posts %}
         <section>
             <div class="post">
                 
                 <div class="post-image-container">
                     <div class="box2">
-                        <img src="{% static 'myapp/images/Post1.jpeg' %}" class="post-image">
-                        <p style="color: rgba(251, 251, 251, 0.995);">By Baboș Cătălin-Daniel, Posted on 05.06.2023</p>
+                        <img src="{{ post.image.url }}" class="post-image">
+                        <p style="color: rgba(251, 251, 251, 0.995);"> Posted on {{ post.post_date }}</p>
                     </div>
                 </div>
+               
                 <div class="post-text">
                     <div class="box">
-                        <h2>This is my first post on this blog</h2>
+                        <h2>{{ post.title }}</h2>
 
-                        <p>Hello everyone, my name is Cata and I present to you the first post of my blog, here I will post sometimes when I remember the existence of the blog or when I am bored.
-                            That was my first post, I wish you a nice day and goodbye.
+                        <p>{{ post.paragraph }}</p>
+                        <a href="{% url 'post_detail' post.id %}" class="btn">Read More</a>
+                       
                     </div>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="post">
-                <div class="post-text">
-                    <div class="box">
-                        <h2>Morning coffee☕</h2>
-
-                        <p>Ladies and gentlemen, on this morning, let's thank the morning coffee that through its power to get us through the difficulties of the day.
-                            That was my third post, I wish you a nice day and goodbye.
-                    </div>
-                </div>  
-                <div class="post-image-container">
-                    <div class="box2">
-                        <img src="{% static 'myapp/images/Post3.png' %}" class="post-image">
-                        <p style="color: rgba(251, 251, 251, 0.995);">By Baboș Cătălin-Daniel, Posted on 05.06.2023</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-        <div class="post">
-            <div class="post-text">
-                <div class="box2">
-                    <h2>I WAS ACCEPTED TO THE FACULTY!!!</h2>
-                    <img src="{% static 'myapp/images/Post2.jpeg'%}" alt="FACULTY" class="resized-image">
-                    
-                    <p style="color: rgba(251, 251, 251, 0.995);">By Baboș Cătălin-Daniel, Posted on 13.09.2023</p>
-                    <div class="chenar">
-                    <p>Now I remembered the existence of the blog and I want to inform you that I have entered the UVT on the Artificial Intelligence section, I am very proud of myself and I can't wait for the first day of college, but until then I wish you a nice holiday</p>
-                </div>
-                </div>
-            </div>
-        </div>
-        </section>
-        <section>
-            <div class="post">
-                
-                <div class="post-image-container">
-                    <div class="box2">
-                        <img src="{% static 'myapp/images/Post4.jpeg' %}" class="post-image">
-                        <p style="color: rgba(251, 251, 251, 0.995);">By Baboș Cătălin-Daniel, Posted on 07.02.2024</p>
-                    </div>
-                </div>
-                <div class="post-text">
-                    <div class="box">
-                        <h2>The Beauty of Nature</h2>
-
-                        <p>A moment of silence for the beauty of nature that surprises us every day.
-                            Let's keep fighting to preserve this beauty for future generations.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="post">
-                <div class="post-text">
-                    <div class="box">
-                        <h2>Stories at the cottage</h2>
-
-                        <p>On a night like this, after the sessions are over, it's a perfect time to bring your colleagues and friends to an excuse to the mountains where you can spend the night by the campfire telling horror stories 👻.</p>
-                    </div>
-                </div>  
-                <div class="post-image-container">
-                    <div class="box2">
-                        <img src="{% static 'myapp/images/Post5.jpeg' %}" class="post-image">
-                        <p style="color: rgba(251, 251, 251, 0.995);">By Baboș Cătălin-Daniel, Posted on 20.02.2024</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {% endfor %}
+        {% endblock %}
     </main>
-    <script src="{% static 'myapp/searchPosts.js' %}"></script>
-<script src="{% static 'myapp/menu.js'%}"></script>
-<script src="{% static 'myapp/BackToTheTop.js'%}"></script>   
-{% endblock %} 
+    <script src="{% static 'js/searchPosts.js' %}"></script>
+<script src="{% static 'js/menu.js'%}"></script>
+<script src="{% static 'js/BackToTheTop.js'%}"></script>   
     <footer>
         <a href="#" onclick="toTop(); return false;" class="back-to-top">⇑</a>
         <p>© 2024 Baboș Cătălin-Daniel Blog</p>
